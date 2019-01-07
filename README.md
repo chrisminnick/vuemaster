@@ -1,4 +1,5 @@
-# my-first-app
+# Vue Master
+Vue Master gives you two random photos. Your job is to pick which one you like better. The app calculates scores and shows which pictures are the most popular. A demo app for learning Vue.
 
 ## Project setup
 ```
