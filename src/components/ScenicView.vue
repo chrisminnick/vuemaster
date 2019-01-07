@@ -4,8 +4,8 @@
     <img v-bind:alt="view.title" :src="require(`../assets/${view.imgUrl}`)" />
     <figcaption>
     <label>
-    <input type="radio" name="vote" v-bind:value="view.id" />
-    This view is better!
+    <input type="radio" name="vote" v-bind:value="view.id" v-on:click="$emit('voted')" />
+    This view is better! ({{view.currentScore}})
     </label>
     </figcaption>
     </figure>

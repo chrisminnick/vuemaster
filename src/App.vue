@@ -1,8 +1,11 @@
 <template>
   <div id="app">
     <div class="d-flex justify-content-center">
-    <ScenicView v-for="view in views" :key="view.id"
-                v-bind:view="view" class="p-2">
+    <ScenicView v-for="view in views"
+                :key="view.id"
+                v-bind:view="view"
+                v-on:voted="view.currentScore+=1"
+                class="p-2">
     </ScenicView>
     </div>
 
@@ -26,8 +29,8 @@ export default {
   data() {
       return {
           views: [
-              {title: 'my picture', imgUrl: 'picture1.jpeg', id: '1'},
-              {title: 'my other picture', imgUrl: 'picture2.jpeg', id: '4'}
+              {title: 'my picture', imgUrl: 'picture1.jpeg', id: '1', currentScore: 0},
+              {title: 'my other picture', imgUrl: 'picture2.jpeg', id: '4',  currentScore: 0}
           ],
           leaders: []
       }
