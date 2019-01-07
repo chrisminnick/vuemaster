@@ -1,17 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <CurrentLeaders v-bind:leaders="[1,4,2,6]"/>
+    <ScenicView id="3"
+                title="My Favorite View"
+                img-url="picture1.jpeg"
+                current-score="12"
+    />
+    <ScenicView id="6"
+                title="Somewhere"
+                img-url="picture2.jpeg"
+                current-score="0"
+    />
+
+
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CurrentLeaders from './components/CurrentLeaders.vue'
+import ScenicView from './components/ScenicView.vue'
+
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    CurrentLeaders,
+    ScenicView
   }
 }
 </script>
