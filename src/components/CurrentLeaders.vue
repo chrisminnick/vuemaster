@@ -3,7 +3,7 @@
     <h1>Current Leaders</h1>
     <ol>
       <li v-for="leader in leaders">
-        {{leader}}
+        {{leader.title}}
       </li>
     </ol>
   </div>

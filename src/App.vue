@@ -36,7 +36,18 @@ export default {
   },
   computed: {
       calculateLeaders: function() {
-          let newLeaders = ["three","four"];
+          function compare(a,b) {
+              const scoreA = a.currentScore;
+              const scoreB = b.currentScore;
+              let comparison = 0;
+              if (scoreA > scoreB) {
+                  comparison = 1;
+              } else if (scoreA < scoreB) {
+                  comparison = -1;
+              }
+              return comparison;
+          }
+          let newLeaders = this.views.sort(compare);
           return newLeaders;
       }
   }
