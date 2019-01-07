@@ -1,16 +1,10 @@
 <template>
   <div id="app">
     <CurrentLeaders v-bind:leaders="[1,4,2,6]"/>
-    <ScenicView id="3"
-                title="My Favorite View"
-                img-url="picture1.jpeg"
-                current-score="12"
-    />
-    <ScenicView id="6"
-                title="Somewhere"
-                img-url="picture2.jpeg"
-                current-score="0"
-    />
+
+    <ScenicView v-for="view in views" :key="view.id"
+                v-bind:view="view">
+    </ScenicView>
 
 
 
@@ -27,6 +21,15 @@ export default {
   components: {
     CurrentLeaders,
     ScenicView
+  },
+  data() {
+      return {
+          views: [
+              {title: 'my picture', imgUrl: 'picture1.jpeg', id: '1'},
+              {title: 'my other picture', imgUrl: 'picture2.jpeg', id: '4'}
+          ],
+          leaders: []
+      }
   }
 }
 </script>

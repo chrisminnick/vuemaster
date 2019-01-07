@@ -1,10 +1,10 @@
 <template>
   <div class="scenic-view">
     <figure>
-    <img v-bind:alt="title" :src="require(`../assets/${imgUrl}`)" />
+    <img v-bind:alt="view.title" :src="require(`../assets/${view.imgUrl}`)" />
     <figcaption>
     <label>
-    <input type="radio" name="vote" v-bind:value="id" />
+    <input type="radio" name="vote" v-bind:value="view.id" />
     This view is better!
     </label>
     </figcaption>
@@ -16,10 +16,7 @@
 export default {
   name: 'ScenicView',
   props: {
-    id: Number,
-    title: String,
-    imgUrl: String,
-    CurrentScore: Number
+    view:Object
   }
 }
 </script>
