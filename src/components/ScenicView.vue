@@ -26,9 +26,7 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
-.scenic-view {
-  float:right;
-}
+
 a {
   color: #42b983;
 }

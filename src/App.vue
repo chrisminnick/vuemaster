@@ -1,11 +1,12 @@
 <template>
   <div id="app">
-    <CurrentLeaders v-bind:leaders="[1,4,2,6]"/>
-
+    <div class="d-flex justify-content-center">
     <ScenicView v-for="view in views" :key="view.id"
-                v-bind:view="view">
+                v-bind:view="view" class="p-2">
     </ScenicView>
+    </div>
 
+    <CurrentLeaders v-bind:leaders="[1,4,2,6]"/>
 
 
   </div>
