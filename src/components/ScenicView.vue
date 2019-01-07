@@ -5,7 +5,7 @@
     <figcaption>
     <label>
     <input type="radio" name="vote" v-bind:value="view.id" v-on:click="$emit('voted')" />
-    This view is better! ({{view.currentScore}})
+    {{view.title}} (current score: {{view.currentScore}})
     </label>
     </figcaption>
     </figure>

@@ -40,15 +40,16 @@ export default {
               const scoreA = a.currentScore;
               const scoreB = b.currentScore;
               let comparison = 0;
-              if (scoreA > scoreB) {
+              if (scoreA < scoreB) {
                   comparison = 1;
-              } else if (scoreA < scoreB) {
+              } else if (scoreA > scoreB) {
                   comparison = -1;
               }
               return comparison;
           }
-          let newLeaders = this.views.sort(compare);
-          return newLeaders;
+          let sortedLeaders = this.views.slice(); //copy by value, not by reference
+          sortedLeaders.sort(compare);
+          return sortedLeaders;
       }
   }
 }
