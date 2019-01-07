@@ -1,11 +1,11 @@
 <template>
   <div class="current-leaders">
     <h1>Current Leaders</h1>
-    <ul>
-      <li>{{leaders[0]}}</li>
-      <li>{{leaders[1]}}</li>
-      <li>{{leaders[2]}}</li>
-    </ul>
+    <ol>
+      <li v-for="leader in leaders">
+        {{leader}}
+      </li>
+    </ol>
   </div>
 </template>
 
@@ -23,5 +23,11 @@ export default {
 
 a {
   color: #42b983;
+}
+ol {
+  list-style-position: inside;
+  text-align: left;
+  width: 300px;
+  margin: 0 auto;
 }
 </style>

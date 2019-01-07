@@ -9,7 +9,7 @@
     </ScenicView>
     </div>
 
-    <CurrentLeaders v-bind:leaders="[1,4,2,6]"/>
+    <CurrentLeaders v-bind:leaders= calculateLeaders />
 
 
   </div>
@@ -31,8 +31,13 @@ export default {
           views: [
               {title: 'my picture', imgUrl: 'picture1.jpeg', id: '1', currentScore: 0},
               {title: 'my other picture', imgUrl: 'picture2.jpeg', id: '4',  currentScore: 0}
-          ],
-          leaders: []
+          ]
+      }
+  },
+  computed: {
+      calculateLeaders: function() {
+          let newLeaders = ["three","four"];
+          return newLeaders;
       }
   }
 }
