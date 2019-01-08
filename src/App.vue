@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="d-flex justify-content-center">
-    <ScenicView v-for="view in views"
+    <ScenicView v-for="view in viewPair"
                 :key="view.id"
                 v-bind:view="view"
                 v-on:voted=voteAndChange(view)
@@ -37,7 +37,8 @@ export default {
               {title: 'this is not my picture', imgUrl: 'picture2.jpeg', id: '6',  currentScore: 0},
               {title: 'this is not a picture', imgUrl: 'picture1.jpeg', id: '7', currentScore: 0},
               {title: 'this is a great picture', imgUrl: 'picture2.jpeg', id: '8',  currentScore: 0}
-          ]
+          ],
+          viewPair:[]
       }
   },
   computed: {
@@ -60,9 +61,20 @@ export default {
   },
   methods: {
       voteAndChange: function(view) {
-          view.currentScore+=1
+          view.currentScore+=1;
+          this.displayNewImages();
+      },
+      displayNewImages: function() {
+          let count = this.views.length;
+          let image1 = Math.floor((Math.random() * count));
+          let image2 = Math.floor((Math.random() * count));
+          this.viewPair = [this.views[image1], this.views[image2]];
+          //return viewPair;
       }
-  }
+  },
+  beforeMount: function() {
+          this.displayNewImages();
+      }
 }
 </script>
 
