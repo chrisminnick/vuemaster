@@ -4,7 +4,7 @@
     <ScenicView v-for="view in views"
                 :key="view.id"
                 v-bind:view="view"
-                v-on:voted="view.currentScore+=1"
+                v-on:voted=voteAndChange(view)
                 class="p-2">
     </ScenicView>
     </div>
@@ -50,6 +50,11 @@ export default {
           let sortedLeaders = this.views.slice(); //copy by value, not by reference
           sortedLeaders.sort(compare);
           return sortedLeaders;
+      }
+  },
+  methods: {
+      voteAndChange: function(view) {
+          view.currentScore+=1
       }
   }
 }
