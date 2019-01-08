@@ -69,7 +69,6 @@ export default {
           let image1 = Math.floor((Math.random() * count));
           let image2 = Math.floor((Math.random() * count));
           this.viewPair = [this.views[image1], this.views[image2]];
-          //return viewPair;
       }
   },
   beforeMount: function() {
