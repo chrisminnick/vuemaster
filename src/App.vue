@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex flex-wrap flex-sm-nowrap justify-content-center">
     <ScenicView v-for="view in viewPair"
                 :key="view.id"
                 v-bind:view="view"
@@ -69,6 +69,7 @@ export default {
           let image1 = Math.floor((Math.random() * count));
           let image2 = Math.floor((Math.random() * count));
           this.viewPair = [this.views[image1], this.views[image2]];
+          //return viewPair;
       }
   },
   beforeMount: function() {
