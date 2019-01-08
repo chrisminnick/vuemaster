@@ -30,7 +30,13 @@ export default {
       return {
           views: [
               {title: 'my picture', imgUrl: 'picture1.jpeg', id: '1', currentScore: 0},
-              {title: 'my other picture', imgUrl: 'picture2.jpeg', id: '4',  currentScore: 0}
+              {title: 'my other picture', imgUrl: 'picture2.jpeg', id: '2',  currentScore: 0},
+              {title: 'my other other picture', imgUrl: 'picture1.jpeg', id: '3', currentScore: 0},
+              {title: 'my really other picture', imgUrl: 'picture2.jpeg', id: '4',  currentScore: 0},
+              {title: 'some other picture', imgUrl: 'picture1.jpeg', id: '5', currentScore: 0},
+              {title: 'this is not my picture', imgUrl: 'picture2.jpeg', id: '6',  currentScore: 0},
+              {title: 'this is not a picture', imgUrl: 'picture1.jpeg', id: '7', currentScore: 0},
+              {title: 'this is a great picture', imgUrl: 'picture2.jpeg', id: '8',  currentScore: 0}
           ]
       }
   },
