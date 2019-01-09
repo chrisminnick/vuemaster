@@ -29,14 +29,14 @@ export default {
   data() {
       return {
           views: [
-              {title: 'my picture', imgUrl: 'picture1.jpeg', id: '1', currentScore: 0},
-              {title: 'my other picture', imgUrl: 'picture2.jpeg', id: '2',  currentScore: 0},
-              {title: 'my other other picture', imgUrl: 'picture1.jpeg', id: '3', currentScore: 0},
-              {title: 'my really other picture', imgUrl: 'picture2.jpeg', id: '4',  currentScore: 0},
-              {title: 'some other picture', imgUrl: 'picture1.jpeg', id: '5', currentScore: 0},
-              {title: 'this is not my picture', imgUrl: 'picture2.jpeg', id: '6',  currentScore: 0},
-              {title: 'this is not a picture', imgUrl: 'picture1.jpeg', id: '7', currentScore: 0},
-              {title: 'this is a great picture', imgUrl: 'picture2.jpeg', id: '8',  currentScore: 0}
+              {title: 'from the plane', imgUrl: 'picture1.jpeg', id: '1', currentScore: 0},
+              {title: 'nighttime', imgUrl: 'picture2.jpeg', id: '2',  currentScore: 0},
+              {title: 'canal', imgUrl: 'picture3.jpeg', id: '3', currentScore: 0},
+              {title: 'foggy forest', imgUrl: 'picture4.jpeg', id: '4',  currentScore: 0},
+              {title: 'goat', imgUrl: 'picture5.jpeg', id: '5', currentScore: 0},
+              {title: 'boots', imgUrl: 'picture6.jpeg', id: '6',  currentScore: 0},
+              {title: 'wind', imgUrl: 'picture7.jpeg', id: '7', currentScore: 0},
+              {title: 'liberty', imgUrl: 'picture8.jpeg', id: '8',  currentScore: 0}
           ],
           viewPair:[]
       }
