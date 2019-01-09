@@ -1,7 +1,7 @@
 <template>
-  <div class="scenic-view">
+  <div class="scenic-view p-2">
     <figure>
-    <img v-bind:alt="view.title" :src="require(`../assets/${view.imgUrl}`)" />
+    <img class="img-fluid" v-bind:alt="view.title" :src="require(`../assets/${view.imgUrl}`)" />
     <figcaption>
     <label>
     <input type="radio" name="vote" v-bind:value="view.id" v-on:click="$emit('voted')" />
