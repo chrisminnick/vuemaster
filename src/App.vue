@@ -67,7 +67,11 @@ export default {
       displayNewImages: function() {
           let count = this.views.length;
           let image1 = Math.floor((Math.random() * count));
-          let image2 = Math.floor((Math.random() * count));
+          let image2;
+          do {
+            image2 = Math.floor((Math.random() * count));
+          }
+          while (count > 1 && image1 == image2);
           this.viewPair = [this.views[image1], this.views[image2]];
           //return viewPair;
       }
